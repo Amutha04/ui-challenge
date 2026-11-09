@@ -23,7 +23,7 @@ function ObjectAdd() {
             }
         }
 
-        dispatch(addObject( obj))
+        dispatch(addObject(name, obj))
     }
 
     return (
