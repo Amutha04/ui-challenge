@@ -4,20 +4,20 @@ const initialState = {
 
 const ObjectReducer = (state = initialState, action) => {
     switch(action.type) {
-        case 'FETCH_TICKETS_CUSTOMER':
+        case 'FETCH_OBJECTS':
             return {
                 ...state,
-                customerTickets : action.payload
+                objectList : action.payload
             }
-        case 'ADD_TICKET':
+        case 'ADD_OBJECT':
             return {
                 ...state,
-                customerTickets : [...state.customerTickets, action.payload]
+                objectList : [...state.objectList, action.payload]
             }
-        case 'DELETE_TICKET':
+        case 'DELETE_OBJECT':
             return {
                 ...state,
-                customerTickets : [...state.customerTickets.filter(t => t.ticketId !== action.payload)]
+                objectList : [...state.objectList.filter(obj => obj.id !== action.payload)]
             }
         default:
             return state

@@ -1,8 +1,15 @@
+import { Route, Routes } from "react-router"
+import ObjectDashboard from "./components/ObjectDashboard"
+import ObjectList from "./components/ObjectList"
+
 function App() {
   return (
-    <div>
-      
-    </div>
+    <Routes>
+      <Route path="" element={<ObjectDashboard/>}>
+      <Route path="object-list" element={<ObjectList/>}/>
+      </Route>
+    </Routes>
+    
   )
 }
 
